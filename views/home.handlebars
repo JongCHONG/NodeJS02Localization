@@ -1,7 +1,14 @@
 <div>
-  {{#each translation }}
-    {{#if translation === lang}}
-      LL
-    {{/if}}
-  {{/each}}
+  {{#if isFr}}
+    <h1>{{translation.fr.pageTitle}}</h1>
+    <h2>{{translation.fr.title}}</h2>
+  {{/if}}
+  {{#if isEs}}
+    <h1>{{translation.es.pageTitle}}</h1>
+    <h2>{{translation.es.title}}</h2>
+  {{/if}}
+  {{#if isEn}}
+    <h1>{{translation.en.pageTitle}}</h1>
+    <h2>{{translation.en.title}}</h2>
+  {{/if}}
 </div>
