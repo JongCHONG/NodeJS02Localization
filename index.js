@@ -11,11 +11,14 @@ app.get("/:lang?", (req, res) => {
   const { lang } = req.params //pour recupérer :lang
   //req.query pour récupérer ?username&password
 
+  //Object.keys(translation).includes(lang)
   res.render('home', {
     translation,
+    lang,
     isFr: lang === "fr",
     isEn: lang === "en",
     isEs: lang === "es"
+    //translations[lang].title
   })
 })
 
